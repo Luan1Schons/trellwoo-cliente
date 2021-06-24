@@ -2,12 +2,13 @@
 /**
  * Plugin name: Trayllo WooCoommerce Cliente
  * Description: Plugin do Trayllo Woocommerce para Wordpress
+ * Version : 1.0
+ * Author: ER Soluções WEB
+ * Author URI: https://www.ersolucoesweb.com.br/
+ * License: GPLv2
  * */
 
-
-/**
- * Register a custom menu page.
- */
+add_action( 'admin_menu', 'woo_trayllo_client_menu_page' );
 function woo_trayllo_client_menu_page(){
     add_menu_page( 
         __( 'Trayllo WooCommerce - Trello', 'textdomain' ),
@@ -19,11 +20,12 @@ function woo_trayllo_client_menu_page(){
         4
     ); 
 }
-add_action( 'admin_menu', 'woo_trayllo_client_menu_page' );
- 
+
+
 /**
- * Display a custom menu page
+ * Display page
  */
+
 function main_trayllo_woo_client(){
     $nonce = wp_create_nonce('trayllo_check_domain');
     ob_start();
