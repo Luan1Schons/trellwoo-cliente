@@ -8,6 +8,10 @@
  * License: GPLv2
  * */
 
+ /**
+  * Add menu Item
+  */
+
 add_action( 'admin_menu', 'woo_trayllo_client_menu_page' );
 function woo_trayllo_client_menu_page(){
     add_menu_page( 
@@ -20,7 +24,6 @@ function woo_trayllo_client_menu_page(){
         4
     ); 
 }
-
 
 /**
  * Display page
