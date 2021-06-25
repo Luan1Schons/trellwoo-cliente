@@ -1,12 +1,6 @@
 <?php
 /**
- * Plugin Name: Trellwoo
- * Plugin URI: https://trellwoo.com.br
  * Description: Integração entre WooCommerce e Trello. Crie cards automaticamente no seu Trello e melhore a organização dos pedidos da sua loja virtual.
- * Version: 1.0
- * Author: ER Soluções Web
- * Author URI: https://www.ersolucoesweb.com.br/
- * License: GPLv2
  *
  * @package trellwoo
  */
