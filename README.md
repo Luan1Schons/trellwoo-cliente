@@ -1,7 +1,7 @@
 === Trellwoo ===
 Contributors: luansp12
 Tags: trello,woocommerce,cards,organization
-Requires at least: 5.0
+Requires at least: 4.7
 Tested up to: 8.0
 Requires PHP: 7.0
 License: GPLv2
