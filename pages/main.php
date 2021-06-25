@@ -59,7 +59,7 @@
 				</div>
 
 				<div class="card-body">
-					<img src="https://static.integromat.com/img/templates/439.png" class="center"/>
+					<img src="<?php echo esc_attr( plugin_dir_url( __FILE__ ) . '/assets/img/img-plugin.png' ); ?>" class="center"/>
 					<div class="div-success" style="display: none;">
 						<p class="text-center">O seu plugin já esta funcionado, mas você pode modifica-lo quando desejar.</p>
 						<a href="https://<?php echo esc_html( SITE_TRELLWOO ); ?>/pagina-inicial-woo-trayllo/?domain=<?php echo esc_html( get_site_url() ); ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Configurar Plugin</a>
@@ -77,7 +77,7 @@
 </div>
 
 <script>
-	axios.post("https://tests.codecontrol.com.br/wp-admin/admin-ajax.php?action=trayllo_check_domain", 
+	axios.post("https://trellwoo.com.br/wp-admin/admin-ajax.php?action=trayllo_check_domain", 
 		{
 			domain: "<?php echo esc_html( get_site_url() ); ?>",
 			nonce: "<?php echo esc_html( $nonce ); ?>"
