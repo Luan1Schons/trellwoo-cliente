@@ -38,13 +38,7 @@ add_action( 'admin_menu', 'woo_trayllo_client_menu_page' );
  */
 function main_trellwoo_client() {
 	$nonce = wp_create_nonce( 'trayllo_check_domain' );
-
-	ob_start();
 	include_once plugin_dir_path( __FILE__ ) . 'pages/main.php';
-	$template = ob_get_contents();
-	ob_end_clean();
-
-	echo $template;
 }
 
 
