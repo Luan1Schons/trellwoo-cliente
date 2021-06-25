@@ -25,7 +25,7 @@ function woo_trayllo_client_menu_page() {
 		__( 'Trellwoo WooCommerce', 'textdomain' ),
 		'Trellwoo',
 		'manage_options',
-		'custompage',
+		'trellwoo_main',
 		'main_trellwoo_client',
 		'dashicons-admin-plugins',
 		4
@@ -46,9 +46,13 @@ function main_trellwoo_client() {
  * Load custom plugin css and scripts
  */
 function trellwoo_scripts() {
-	wp_enqueue_style( 'style', plugin_dir_url( __FILE__ ) . '/assets/theme/trellwoo.css', false, 1.1, 'all' );
-	wp_enqueue_style( 'bootstrap', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/css/bootstrap.min.css', false, 1.0, 'all' );
-	wp_enqueue_script( 'script', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/js/bootstrap.min.js', array( 'jquery' ), 1.1, true );
-	wp_enqueue_script( 'axios', 'https://unpkg.com/axios/dist/axios.min.js', null, 1.1, false );
+	if ( isset( $_GET['page'] ) ) {
+		if ( 'trellwoo_main' === $_GET['page'] ) {
+			wp_enqueue_style( 'style', plugin_dir_url( __FILE__ ) . '/assets/theme/trellwoo.css', false, 1.1, 'all' );
+			wp_enqueue_style( 'bootstrap', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/css/bootstrap.min.css', false, 1.0, 'all' );
+			wp_enqueue_script( 'script', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/js/bootstrap.min.js', array( 'jquery' ), 1.1, true );
+			wp_enqueue_script( 'axios', 'https://unpkg.com/axios/dist/axios.min.js', null, 1.1, false );
+		}
+	}
 }
 add_action( 'admin_enqueue_scripts', 'trellwoo_scripts' );
