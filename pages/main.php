@@ -62,12 +62,12 @@
 					<img src="<?php echo esc_attr( plugin_dir_url( __FILE__ ) . '/assets/img/img-plugin.png' ); ?>" class="center"/>
 					<div class="div-success" style="display: none;">
 						<p class="text-center">O seu plugin já esta funcionado, mas você pode modifica-lo quando desejar.</p>
-						<a href="https://<?php echo esc_html( SITE_TRELLWOO ); ?>/pagina-inicial-woo-trayllo/?domain=<?php echo esc_html( get_site_url() ); ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Configurar Plugin</a>
+						<a href="https://<?php echo esc_attr( SITE_TRELLWOO ); ?>/pagina-inicial-woo-trayllo/?domain=<?php echo esc_attr( get_site_url() ); ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Configurar Plugin</a>
 					</div>
 
 					<div class="div-error" style="display: none;">
 						<p class="text-center">Configure agora o plugin com o seu WooCommerce & Trello</p>
-						<a href="https://<?php echo esc_html( SITE_TRELLWOO ); ?>/pagina-inicial-woo-trayllo/?domain=<?php echo esc_html( get_site_url() ); ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Configurar Plugin</a>
+						<a href="https://<?php echo esc_attr( SITE_TRELLWOO ); ?>/pagina-inicial-woo-trayllo/?domain=<?php echo esc_attr( get_site_url() ); ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Configurar Plugin</a>
 					</div>
 
 				</div>
@@ -79,8 +79,8 @@
 <script>
 	axios.post("https://trellwoo.com.br/wp-admin/admin-ajax.php?action=trayllo_check_domain", 
 		{
-			domain: "<?php echo esc_html( get_site_url() ); ?>",
-			nonce: "<?php echo esc_html( $nonce ); ?>"
+			domain: "<?php echo esc_attr( get_site_url() ); ?>",
+			nonce: "<?php echo esc_attr( $nonce ); ?>"
 		}).then(res => {
 				if(res.data.status == 'true'){
 					jQuery('.status-success').show();
