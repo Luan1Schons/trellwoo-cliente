@@ -49,7 +49,6 @@ function trellwoo_scripts() {
 	if ( 'toplevel_page_trellwoo_main' === get_current_screen()->id ) {
 		wp_enqueue_style( 'style', plugin_dir_url( __FILE__ ) . '/assets/theme/trellwoo.css', false, 1.1, 'all' );
 		wp_enqueue_style( 'bootstrap', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/css/bootstrap.min.css', false, 1.0, 'all' );
-		wp_enqueue_script( 'script', plugin_dir_url( __FILE__ ) . '/assets/bootstrap-5.0.2/js/bootstrap.min.js', array( 'jquery' ), 1.1, true );
 		wp_enqueue_script( 'axios', 'https://unpkg.com/axios/dist/axios.min.js', null, 1.1, false );
 	}
 }

@@ -77,7 +77,7 @@
 </div>
 
 <script>
-	axios.post("https://trellwoo.com.br/wp-admin/admin-ajax.php?action=trayllo_check_domain", 
+	axios.post("https://<?php echo esc_attr( SITE_TRELLWOO ); ?>/wp-admin/admin-ajax.php?action=trayllo_check_domain", 
 		{
 			domain: "<?php echo esc_attr( get_site_url() ); ?>",
 			nonce: "<?php echo esc_attr( $nonce ); ?>"
